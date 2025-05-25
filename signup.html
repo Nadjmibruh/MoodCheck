@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>MoodCheck</title>
+    </title>
+
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+</head>
+
+<body>
+   
+<header>
+<nav>
+<ul>
+    <li><img src="utem_logo.png" class="logo"></li>
+</ul>
+</nav>
+<img src="moodcheck_textlogo.png" class="logo">
+<img src="moodcheck_iconlogo.png" class="logo">
+
+</header>
+
+<!-- Hamburger -->
+<div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+<aside id="sidebar" class="sidebar collapsed">
+  <a href="#"><span class="label">Home Page🏠</span></a>
+  <a href="#"><span class="label">Profile👤</span></a>
+  <a href="#"><span class="label">Activity🧠</span></a>
+  <a href="#"><span class="label">Counseling Service💬</span></a>
+  <a href="#"><span class="label">History⏳</span></a>
+</aside>
+
+<!--Sign up-->
+<div class="signup-container">
+  <h2>Sign up</h2>
+
+  <form>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td>Birth Date</td>
+            <td><input type="text" placeholder="dd/mm/yyyy" onfocus="(this.type='date')"></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="tel"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <div class="password-field">
+                    <input type="password">
+                    <span class="toggle-eye">👁️</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td>
+                <div class="password-field">
+                    <input type="password">
+                    <span class="toggle-eye">👁️</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="role-selection">
+      <label><strong>Are you a?</strong></label><br>
+      <label><input type="radio" name="role" /> Student</label>
+      <label><input type="radio" name="role" /> Clinic Staff</label>
+      <label><input type="radio" name="role" /> Counsellor</label>
+    </div>
+
+  </div>
+   </form>
+</div>
+
+<button class="signup-btn">Sign up</button>
+
+</body>
+</html>

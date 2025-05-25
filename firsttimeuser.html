@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+</head>
+
+<body>
+<header>
+<nav>
+<ul>
+    <li><img src="moodcheck_fulllogo.png" class="logo"></li>
+</ul>
+</nav>
+<!--user, first name last name-->
+<p>First Name <br> Last Name</p>
+<img src="user_icon.png" class="logo">
+</header>
+
+<!-- Hamburger -->
+<div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+<aside id="sidebar" class="sidebar collapsed">
+  <a href="#"><span class="label">Home Page🏠</span></a>
+  <a href="#"><span class="label">Profile👤</span></a>
+  <a href="#"><span class="label">Activity🧠</span></a>
+  <a href="#"><span class="label">Counseling Service💬</span></a>
+  <a href="#"><span class="label">History⏳</span></a>
+</aside>
+
+<p id="introduction">Welcome to MoodCheck — your personal space for mental wellness.
+    <br><br> University life can be overwhelming, with assignments, exams, and daily pressures affecting your mental health.
+     MoodCheck is a safe, student-friendly platform designed to help you understand and improve your emotional well-being. 
+     Through guided assessments, personalized self-care activities, and easy access to UTeM's support services, 
+     MoodCheck empowers you to take control of your mental health — one small step at a time.
+</p>
+
+<button class="task-button" onclick="location.href='questionnaire.html'">
+    <span class="text">
+        <strong>First time here? Take this questionnaire</strong><br>
+        <small>To know your results</small>
+    </span>
+    <span class="arrow">></span>
+</button>
+
+</body>
+</html>
