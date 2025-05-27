@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.delius-regular {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.tabs-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: #8ab7e2;
+}
+
+.tabs-container .logo img{
+    width: 130px;
+    height: 60px;
+}
+
+.name{
+    text-align: right;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.user .user-logo {
+    font-size: 48px;
+    margin-top: 10px;
+}
+
+.tabs-container .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar{
+    display: flex;
+    margin-top: auto;
+    padding: 3px;
+    list-style-type: none;
+    background-color: #afcde9;
+    width: 25%;
+    height: 100vh;
+}
+
+
+.content-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    display: flex;
+}
+
+.menu-bar{
+    font-size: 30px;
+    margin-left: 6px;
+    display:inline-block;
+}
+
+.content-text{
+    font-family: "Delius", cursive;
+    font-weight: bold;
+    margin : 20px;
+    margin-top: 35px;
+    font-size: 35px;
+    text-align: justify;
+}
+
+.inside-sidebar ul{
+    list-style-type:none;
+}
+
+.inside-sidebar {
+    display: none;
+}
+.sidebar.expanded .inside-sidebar {
+    display: block;
+}
+
+.btn, .btn-alphabet{
+    margin-top: 20px;
+    text-align: left;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #afcde9;
+    width: 35%;
+    flex: 1;
+}
+.btn:hover,.btn-alphabet:hover{
+    background-color: #7098c1;
+    cursor: pointer;
+}
+
+.btn h2,.btn-alphabet h2{
+    margin: 0;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.btn-group{
+    display: flex;
+    margin: 20px;
+    margin-top: 0;
+    gap: 20px;
+}
+
+audio{
+    width:20%;
+    position: fixed;
+    bottom: 0;
+    margin-left: 80%;
+    z-index: 1000;
+
+}
