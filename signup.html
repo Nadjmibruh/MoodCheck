@@ -19,73 +19,64 @@
 
 </header>
 
-<!-- Hamburger -->
-<div class="menu-icon" onclick="toggleSidebar()">☰</div>
-
-<aside id="sidebar" class="sidebar collapsed">
-  <a href="#"><span class="label">Home Page🏠</span></a>
-  <a href="#"><span class="label">Profile👤</span></a>
-  <a href="#"><span class="label">Activity🧠</span></a>
-  <a href="#"><span class="label">Counseling Service💬</span></a>
-  <a href="#"><span class="label">History⏳</span></a>
-</aside>
-
 <!--Sign up-->
+<!--chatgpt third try-->
 <div class="signup-container">
-  <h2>Sign up</h2>
-
-  <form>
-    <table>
+  
+  <div class="inner-box">
+    <h1 style="background-color:#8AB7E2; color: white;">Sign up</h1>
+    <form class="signup-form">
+      <div class="form-fields">
+        <table style="width: 100%;">
         <tr>
             <td>First Name</td>
-            <td><input type="text"></td>
+            <td colspan="2"><input type="text" required></td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td><input type="text"></td>
+            <td><input type="text" required></td>
         </tr>
         <tr>
             <td>E-mail</td>
-            <td><input type="email"></td>
+            <td><input type="email" required></td>
         </tr>
         <tr>
             <td>Birth Date</td>
-            <td><input type="text" placeholder="dd/mm/yyyy" onfocus="(this.type='date')"></td>
+            <td><input type="date" placeholder="dd/mm/yyyy" required></td>
         </tr>
         <tr>
             <td>Phone Number</td>
-            <td><input type="tel"></td>
+            <td><input type="tel" required></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td>
-                <div class="password-field">
-                    <input type="password">
-                    <span class="toggle-eye">👁️</span>
+            <td><div class="password-field">
+                <input type="password" required>
+                <span class="toggle-eye">👁️</span>
                 </div>
             </td>
         </tr>
         <tr>
             <td>Confirm Password</td>
-            <td>
-                <div class="password-field">
-                    <input type="password">
-                    <span class="toggle-eye">👁️</span>
+            <td><div class="password-field">
+                <input type="password" required>
+                <span class="toggle-eye">👁️</span>
                 </div>
             </td>
         </tr>
-    </table>
+        </table>
+      </div>
 
-    <div class="role-selection">
-      <label><strong>Are you a?</strong></label><br>
-      <label><input type="radio" name="role" /> Student</label>
-      <label><input type="radio" name="role" /> Clinic Staff</label>
-      <label><input type="radio" name="role" /> Counsellor</label>
-    </div>
-
+      <div class="role-selection">
+        <label><strong>Are you a?</strong></label><br>
+        <label><input type="radio" name="role"> Student</label>
+        <label><input type="radio" name="role"> Clinic Staff</label>
+        <label><input type="radio" name="role"> Counsellor</label>
+      </div>
+    </form>
   </div>
-   </form>
 </div>
+
 
 <button class="signup-btn">Sign up</button>
 

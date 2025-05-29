@@ -113,60 +113,76 @@ margin-left: 60px; /* width of the collapsed sidebar */
     text-align: left;
 }
 
+/* chatgpt 3rd try */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
 .signup-container {
-  background-color: #a3c7ea; /* light blue */
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 500px;
-  margin: 100px auto;
+  background-color: #1969C3; /* dark blue */
+  display: block;
+  margin: 100px 130px 40px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.signup-container h2 {
-  background-color: #2b69b1; /* darker blue */
-  color: white;
-  margin: -20px -20px 20px -20px;
-  padding: 10px 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.signup-box {
-  background-color: white;
+.inner-box {
+  background-color: #8AB7E2; /* light blue */
   padding: 20px;
   border-radius: 10px;
 }
 
-.signup-box input[type="text"],
-.signup-box input[type="email"],
-.signup-box input[type="tel"],
-.signup-box input[type="password"],
-.signup-box input[type="date"] {
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-fields {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields input[type="tel"],
+.form-fields input[type="password"],
+.form-fields input[type="date"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
+  padding: 12px;
+  margin: 8px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .password-field {
   position: relative;
 }
 
-.toggle-eye {
+.password-field .toggle-eye {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 18px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .role-selection {
-  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
   text-align: left;
 }
-
-.role-selection label {
-  margin-right: 15px;
+.role-selection label { /*dk how to jarakkan role yet*/
+  justify-content: space-between;
 }
 
 .signup-btn {
@@ -175,6 +191,8 @@ margin-left: 60px; /* width of the collapsed sidebar */
   padding: 10px 30px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
+  display: block; margin: 0 auto; /*untuk center*/
+  width: 60%;
 }
