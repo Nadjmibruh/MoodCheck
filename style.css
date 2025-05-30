@@ -3,12 +3,13 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-height: 60px;
+height: 80px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #8AB7E2;
-padding: 5px 5px;
+padding-left: 0px;
+padding-right: 20px;
 z-index: 10;
 }
 
@@ -21,7 +22,7 @@ gap: 10px;
 }
 
 header .logo {
-height: 50px;
+height: 70px;
 }
 
 header nav ul {
@@ -77,8 +78,9 @@ font-size: 25px;
 font-family:'Segoe UI';
 color: #022957;
 font-weight: 500;
-margin-top: 60px; /* height of the top nav */
-margin-left: 60px; /* width of the collapsed sidebar */
+margin-top: 100px; /* height of the top nav */
+margin-left: 120px; /* width of the collapsed sidebar */
+margin-right: 120px;
 }
 
 .task-button {
@@ -95,8 +97,8 @@ font-size: 1.2em;
 cursor: pointer;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 transition: background-color 0.3s;
-margin-top: 60px; /* height of the top nav */
-margin-left: 60px; /* width of the collapsed sidebar */
+margin-top: 40px; /* height gap dari top nav */
+margin-left: 100px; /* width gap dari collapsed sidebar */
 
 }
 
@@ -193,6 +195,7 @@ body {
   border-radius: 6px;
   font-size: 20px;
   cursor: pointer;
-  display: block; margin: 0 auto; /*untuk center*/
+  display: block; margin: 0px auto; /*untuk center*/
+  margin-bottom: 20px;
   width: 60%;
 }
