@@ -1,25 +1,89 @@
-header {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-height: 80px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #8AB7E2;
-padding-left: 0px;
-padding-right: 20px;
-z-index: 10;
+ body {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 23px;
+            margin-left: 60px;
+            margin-top: 90px;
+        }
+
+        main {
+            padding: 10px;
+            margin-left: 30px;
+        }
+
+        h1 {
+            color: rgb(18, 18, 172);
+            margin: 0 20px;
+            font-size: 32px;
+        }
+
+       header {
+            position: fixed;
+            top: 0;
+             left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #8AB7E2;
+            padding-left: 0px;
+            padding-right: 20px;
+            z-index: 10;
+        }
+
+        
+        header .logo {
+             height: 70px;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+        }
+
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  font-size: smaller;
+}
+
+.sidebar .label {
+  opacity: 0;
+  white-space: nowrap;
+  font-size: 20px;
+  transition: opacity 0.3s;
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar.expanded .label {
+  opacity: 1;
 }
 
 
-.user-info {
-display: flex;
-align-items: center;
-gap: 10px; 
- 
+
+/* keep the toggle button on the blue strip */
+.menu-icon{
+    position: fixed;      /* ignore the body’s 60 px margin */
+    top: 90px;            /* 80 px header height + 10 px gap – adjust if you like */
+    left: 15px;           /* inside the 60 px-wide sidebar */
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 11;          /* stays above the sidebar */
 }
+
+
+
 
 header .logo {
 height: 70px;
@@ -43,6 +107,10 @@ display: inline-block;
   transition: width 0.3s;
   width: 60px; /* collapsed width */
   z-index: 5;
+}
+
+.menu-icon{
+    margin-left: 0%;
 }
 
 .sidebar a {
@@ -73,15 +141,6 @@ display: inline-block;
   opacity: 1;
 }
 
-#introduction{
-font-size: 25px;
-font-family:'Segoe UI';
-color: #022957;
-font-weight: 500;
-margin-top: 100px; /* height of the top nav */
-margin-left: 120px; /* width of the collapsed sidebar */
-margin-right: 120px;
-}
 
 .task-button {
 display: flex;
@@ -115,87 +174,3 @@ margin-left: 100px; /* width gap dari collapsed sidebar */
     text-align: left;
 }
 
-/* chatgpt 3rd try */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-}
-
-.signup-container {
-  background-color: #1969C3; /* dark blue */
-  display: block;
-  margin: 100px 130px 40px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.inner-box {
-  background-color: #8AB7E2; /* light blue */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-fields {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  box-sizing: border-box;
-}
-
-.form-fields input[type="text"],
-.form-fields input[type="email"],
-.form-fields input[type="tel"],
-.form-fields input[type="password"],
-.form-fields input[type="date"] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.password-field {
-  position: relative;
-}
-
-.password-field .toggle-eye {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.role-selection {
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  text-align: left;
-}
-.role-selection label { /*dk how to jarakkan role yet*/
-  justify-content: space-between;
-}
-
-.signup-btn {
-  background-color: #2b69b1;
-  color: white;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  cursor: pointer;
-  display: block; margin: 0px auto; /*untuk center*/
-  margin-bottom: 20px;
-  width: 60%;
-}
