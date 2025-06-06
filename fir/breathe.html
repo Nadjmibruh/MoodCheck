@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Breathing Exercises</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo_moodCheck.png " />
+        <div class="breathe-text">
+          <h1>Breathing Exercise</h1>
+        </div>
+        <div class="notification">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+        <div class="name">
+          <div class="first-name">
+            <p>First Name</p>
+          </div>
+          <div class="last-name">
+            <p>Last Name</p>
+          </div>
+        </div>
+        <div class="user-icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+      <div class="menu-bar">
+        <div class="menu-icon">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game -->
+    <div class="game">
+      <div class="input">
+        <label>Select Breaths</label>
+        <select class="breath-input">
+          <option value="3">3 Breaths</option>
+          <option value="5">5 Breaths</option>
+          <option value="7">7 Breaths</option>
+        </select>
+      </div>
+      <div class="circle-wrap">
+        <div class="circle-outline"></div>
+        <div class="circle-progress"></div>
+      </div>
+      <p class="breaths">
+        Breaths remaining: <span class="breaths-text">3</span>
+      </p>
+      <p class="instructions">Are you ready to start breathing?</p>
+      <button class="start">Begin</button>
+    </div>
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="breathe.js"></script>
+  </body>
+</html>
