@@ -1,0 +1,94 @@
+<html>
+<head>
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+    <link rel = stylesheet type = "text/css" href = "questionnaireresult.css"> </link>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <ul>
+        <li><img src="moodcheck_fulllogo.png" class="logo"></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <p id="username">John<br>Doe</p>
+      <img src="user_icon.png" class="user-icon">
+    </div>
+  </header>
+
+  <div class="menu-icon" onclick="toggleSidebar()">=</div>
+<aside class="sidebar2"></aside>
+<aside id="sidebar" class="sidebar collapsed">
+  <a href="#"><span class="label">Home Page🏠</span></a>
+  <a href="#"><span class="label">Profile👤</span></a>
+  <a href="#"><span class="label">Activity🧠</span></a>
+  <a href="#"><span class="label">Counseling Service💬</span></a>
+  <a href="#"><span class="label">History⏳</span></a>
+</aside>
+
+  <div id="results-container"></div>
+
+  <script>
+    // Example data for one person (can be switched later)
+    const userData = {
+      name: "John Doe",
+      scores: {
+        depression: 16,
+        stress: 29,
+        anxiety: 4
+      }
+    };
+
+    function getSeverity(score) {
+      if (score <= 9) return { level: "NORMAL", class: "normal" };
+      if (score <= 13) return { level: "MILD", class: "mild" };
+      if (score <= 19) return { level: "MODERATE", class: "moderate" };
+      if (score <= 28) return { level: "SEVERE", class: "severe" };
+      return { level: "EXTREMELY SEVERE", class: "extreme" };
+    }
+
+    const tips = {
+      depression: "Try mindfulness, deep breathing, journaling, or light activity. Reach out to UTeM’s counseling service if needed.",
+      stress: "Use guided breathing, mindfulness, or calming games. Consider counseling if stress persists.",
+      anxiety: "Try grounding exercises, focus games, or breathing techniques. UTeM support is available anytime."
+    };
+
+    const emoji = {
+      depression: "😖",
+      stress: "😥",
+      anxiety: "😰"
+    };
+
+    const container = document.getElementById('results-container');
+
+    Object.entries(userData.scores).forEach(([category, score]) => {
+      const severity = getSeverity(score);
+
+      container.innerHTML += `
+      <div class="result-box">
+        <div class="left-section">
+          <div class="label-group">
+            <div class="label-box"><span>${category.charAt(0).toUpperCase() + category.slice(1)} ${emoji[category]}</span></div>
+            <div class="severity-bar ${severity.class}">${severity.level}</div>
+          </div>
+        </div>
+        <div class="right-section">
+          <p>
+            Your ${category} score is <strong>${score}</strong>, which indicates <strong>${severity.level.toLowerCase()} ${category}.</strong> ${tips[category]}
+          </p>
+        </div>
+      </div>
+      `;
+    });
+  </script>
+
+</html>

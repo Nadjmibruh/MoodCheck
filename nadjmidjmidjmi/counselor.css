@@ -1,0 +1,260 @@
+/* New CSS for Mood Check page */
+        body {
+            background-color: #e6f2ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #022957;
+        }
+        
+        .main-content {
+            margin-top: 70px;
+            margin-left: 80px;
+            padding: 30px;
+            max-width: 1000px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #022957;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #9ec9ec;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            margin: 30px 0 20px;
+            font-weight: 600;
+            color: #2b69b1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            background-color: #c8dff7;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .accounts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .account-card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #2b69b1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .account-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+        
+        .account-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #2b69b1, #8AB7E2);
+        }
+        
+        .account-header {
+            font-weight: 600;
+            color: #022957;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .account-header i {
+            margin-right: 10px;
+            color: #2b69b1;
+        }
+        
+        .account-details {
+            margin-bottom: 20px;
+        }
+        
+        .account-name {
+            font-weight: 500;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .account-name i {
+            margin-right: 10px;
+            color: #2b69b1;
+        }
+        
+        .account-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+        
+        .approve-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .approve-btn:hover {
+            background-color: #3d8b40;
+        }
+        
+        .disapprove-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .disapprove-btn:hover {
+            background-color: #d32f2f;
+        }
+        
+        .info-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            max-width: 650px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #607D8B;
+        }
+        
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #607D8B, #9ec9ec);
+        }
+        
+        .info-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .info-btn {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 16px;
+            gap: 12px;
+        }
+        
+        .logout-btn {
+            background-color: #2b69b1;
+            color: white;
+        }
+        
+        .logout-btn:hover {
+            background-color: #1d4d8c;
+        }
+        
+        .disable-btn {
+            background-color: #607D8B;
+            color: white;
+        }
+        
+        .disable-btn:hover {
+            background-color: #455A64;
+        }
+        
+        .account-indicator {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .indicator-active {
+            background-color: #4CAF50;
+            box-shadow: 0 0 8px #4CAF50;
+        }
+        
+        .indicator-inactive {
+            background-color: #f44336;
+            box-shadow: 0 0 8px #f44336;
+        }
+        
+        .indicator-pending {
+            background-color: #FFC107;
+            box-shadow: 0 0 8px #FFC107;
+        }
+
+        .sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #a6c9e2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #8cb3d9;
+}
+
+.sidebar-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}

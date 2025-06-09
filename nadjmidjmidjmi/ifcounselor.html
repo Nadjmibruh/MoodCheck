@@ -1,0 +1,65 @@
+<html>
+<head>
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+</head>
+
+<body>
+<header class="header">
+  <nav>
+    <ul>
+      <li><img src="moodcheck_fulllogo.png" class="logo"></li>
+    </ul>
+  </nav>
+  <div class="user-info">
+  <p>First Name<br>Last Name</p>
+  <img src="user_icon.png" class="user-icon">
+</div>
+</header>
+
+
+<!-- Hamburger -->
+
+<div class="menu-icon" onclick="togg<leSidebar()">=</div>
+
+    <aside id="sidebar" class="sidebar collapsed">
+        <a href="#"> <span class="label">Home Page</span></a>
+        <a href="#"><span class="label">Profile</span></a>
+        <a href="#"><span class="label">Manage user account</span></a>
+        <a href="#"><span class="label">Security & backup</span></a>
+    </aside>
+
+
+<button class="task-button" onclick="location.href='questionnaireresult.html'">
+    <span class="text">
+        <strong>Counseling Appointments</strong><br>
+        <small>See your counseling schedule</small>
+    </span>
+    <span class="arrow">></span>
+</button>
+
+<button class="task-button" onclick="location.href='questionnaire.html'">
+    <span class="text">
+        <strong>Anonymous Messages</strong><br>
+        <small>Check and reply to anonymous messages</small>
+    </span>
+    <span class="arrow">></span>
+</button>
+
+<button class="task-button" onclick="location.href='questionnaire.html'">
+    <span class="text">
+        <strong>Generate Report</strong><br>
+        <small>Send reports to the higher ups</small>
+    </span>
+    <span class="arrow">></span>
+</button>
+
+</body>
+</html>
