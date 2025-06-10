@@ -100,7 +100,7 @@
 }
 
 .content-text{
-    font-family: "Delius", cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin : 20px;
     margin-top: 35px;
@@ -133,7 +133,7 @@
 }
 
 .btn-group h2{
-    font-family: "Delius", cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
