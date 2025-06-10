@@ -143,9 +143,9 @@
                         <small>Accept or decline this appointment</small>
                     </h2>
                 </button>
-                <button class="btn-alphabet" onclick="location.href='alphabet.html'">
+                <button class="btn-alphabet" onclick="location.href='activities.html'">
                     <h2>
-                        <strong>Alphabet Game<br><br></strong>
+                        <strong>Game<br><br></strong>
                         <small>Click here to play the game</small>
                     </h2>
                 </button>
