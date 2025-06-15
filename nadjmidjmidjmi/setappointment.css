@@ -1,0 +1,128 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #c9def4;
+    }
+
+    header {
+      background-color: #8AB7E2;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .user-info {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .box {
+      background-color: #dcecff;
+      padding: 30px;
+      border-radius: 15px;
+      width: 800px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 50px;
+  margin-top: 60px; /* move section lower */
+}
+
+.box > div {
+  flex: 1;
+}
+
+.box > div:last-child {
+  background-color: #d9eaff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+    .box div {
+      margin-bottom: 10px;
+    }
+
+    .level-box {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .level-box strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .calendar-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .speech {
+      background-color: white;
+      border: 2px solid black;
+      padding: 15px;
+      border-radius: 10px;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      background-color: #508ec5;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .level-highlight {
+      font-weight: bold;
+      color: white;
+      background-color: #2b69b1;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .mood-entry-wrapper {
+  margin-top: 100px; /* Adjust this value as needed */
+}
+

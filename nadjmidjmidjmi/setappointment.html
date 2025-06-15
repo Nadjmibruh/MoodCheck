@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+    <link rel = stylesheet type = "text/css" href = "setappointment.css"> </link>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+</head>
+<body>
+
+
+    
+  <header class="header">
+    <nav>
+      <ul>
+        <li><img src="moodcheck_fulllogo.png" class="logo"></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <p id="username">John<br>Doe</p>
+      <img src="user_icon.png" class="user-icon">
+    </div>
+  </header>
+
+
+  <div class="menu-icon" onclick="toggleSidebar()">=</div>
+<aside class="sidebar2"></aside>
+
+  <div class="main">
+    <div class="box">
+        
+      <div>
+        <div class="label">Student Name:</div>
+        <div id="studentName">Loading...</div>
+
+        <div class="label" style="margin-top: 10px;">Counselor Name:</div>
+        <div id="counselorName">Loading...</div>
+
+        <div class="speech" id="messageBubble">...</div>
+
+        <div class="level-box">
+          <strong>Level Selected:</strong>
+          <span id="level" class="level-highlight"></span>
+
+          <div class="label" style="margin-top: 15px;">Note:</div>
+          <div id="note">-</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="calendar-box">
+          <div class="label">Pick a date:</div>
+          <input type="date" class="input">
+        </div>
+
+        <div class="label">Time:</div>
+        <input type="time" class="input">
+
+        <div class="label">Place:</div>
+        <input type="text" class="input">
+
+        <button class="btn">Schedule Appointment</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const url = new URL(window.location.href);
+    const student = url.searchParams.get("student") || "Unknown";
+    const counselor = url.searchParams.get("counselor") || "Unknown";
+    const level = url.searchParams.get("level") || "-";
+    const message = url.searchParams.get("message") || "-";
+
+    document.getElementById("studentName").innerText = student;
+    document.getElementById("counselorName").innerText = counselor;
+    document.getElementById("level").innerText = level;
+    document.getElementById("messageBubble").innerText = message;
+    document.getElementById("note").innerText = message;
+  </script>
+</body>
+
+
+</html>

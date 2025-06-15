@@ -1,0 +1,118 @@
+<html>
+<head>
+    <link rel = stylesheet type = "text/css" href = "style.css"> </link>
+    <link rel = stylesheet type = "text/css" href = "reviewuser.css"> </link>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+</head>
+
+<body>
+
+    
+  <header class="header">
+    <nav>
+      <ul>
+        <li><img src="moodcheck_fulllogo.png" class="logo"></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <p id="username">John<br>Doe</p>
+      <img src="user_icon.png" class="user-icon">
+    </div>
+  </header>
+
+  <div class="menu-icon" onclick="toggleSidebar()">=</div>
+<aside class="sidebar2"></aside>
+
+<main class="content-area">
+  <div class="mood-entry-wrapper">
+    <div class="mood-entry">
+      <div class="speech-bubble">I just want to disappear.</div>
+
+      <div class="mood-info">
+        <div class="levels" data-selected-level="danger">
+          
+  <div class="level-btn" data-level="1">Level 1</div>
+  <div class="level-btn" data-level="2">Level 2</div>
+  <div class="level-btn" data-level="3">Level 3</div>
+  <div class="level-btn" data-level="danger">Danger</div>
+
+
+        </div>
+
+           <div class="note-and-button">
+  <div class="note-box">
+    <strong>Note:</strong><br>
+    This student needed help. Please help them.
+  </div>
+  <a href="setappointment.html?student=Jimmy Neutron&counselor=MsSmith&level=danger&message=I%20have%20an%20anxiety%20attack" class="detail-button">View Details</a>
+</div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<main class="content-area">
+  <div class="mood-entry-wrapper">
+    <div class="mood-entry">
+      <div class="speech-bubble">I have an anxiety attack.</div>
+
+      <div class="mood-info">
+        <div class="levels" data-selected-level="3">
+          
+  <div class="level-btn" data-level="1">Level 1</div>
+  <div class="level-btn" data-level="2">Level 2</div>
+  <div class="level-btn" data-level="3">Level 3</div>
+  <div class="level-btn" data-level="danger">Danger</div>
+
+
+        </div>
+
+       <div class="note-and-button">
+  <div class="note-box">
+    <strong>Note:</strong><br>
+    This student needed help. Please help them.
+  </div>
+  <a href="setappointment.html?student=Nadjmi Karim&counselor=MsKumalala&level=3&message=I%20have%20an%20anxiety%20attack" class="detail-button">View Details</a>
+</div>
+
+<!-- Go to Schedule Button -->
+
+</div>
+
+
+
+
+
+      </div>
+      
+    </div>
+  </div>
+</main>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.levels').forEach(levelGroup => {
+      const selectedLevel = levelGroup.dataset.selectedLevel;
+      const buttons = levelGroup.querySelectorAll('.level-btn');
+      buttons.forEach(btn => {
+        if (btn.dataset.level === selectedLevel) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
+
+
+
+</html>
