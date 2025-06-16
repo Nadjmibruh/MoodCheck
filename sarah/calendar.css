@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+
+       header {
+            position: fixed;
+            top: 0;
+             left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #8AB7E2;
+            padding-left: 0px;
+            padding-right: 20px;
+            z-index: 10;
+        }
+
+        
+        header .logo {
+             height: 70px;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+        }
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Calendar panel */
+.calendar {
+    flex: 2;
+    max-width: 670px;
+    padding: 20px;
+    margin: auto;
+    color: black;
+}
+
+.month {
+    text-align: center;
+    background: white;
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.month button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+table, th, td {
+    width: 75px;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 27px;
+    border-collapse: collapse;
+    border: 0.5px solid blue;
+    font-family: sans-serif;
+
+}
+
+tr, th, td {
+    padding: 10px;
+}
+
+th {
+    background: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td:hover {
+    background: rgb(140, 190, 231);
+    color: blue;
+    cursor: pointer;
+}
+
+/* Scheduled date highlight */
+.scheduled {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+/* Today highlight */
+.today {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Right panel for schedule */
+.schedule-panel {
+    flex: 1;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: -17px ;
+}
+
+.schedule-panel h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.schedule-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-panel li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.schedule-panel p {
+    font-size: 18px;
+}
+
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    margin-left: 60px;
+    margin-top: 90px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8AB7E2;
+    padding-left: 0px;
+    padding-right: 20px;
+    z-index: 10;
+}
+
+.user-info p {
+    display: none;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
+}
+
+.sidebar .label {
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.sidebar.expanded .label {
+    opacity: 1;
+}
+
+/* keep the toggle button on the blue strip */
+.menu-icon {
+    position: fixed;
+    top: 90px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+header .logo {
+    height: 70px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    background-color: #9ec9ec;
+    overflow-x: hidden;
+    transition: width 0.3s;
+    width: 60px;
+    z-index: 5;
+}
+
+.menu-icon {
+    margin-left: 0%;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar a:first-child {
+    margin-top: 50px;
+}
+
+.sidebar .icon {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar .label {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+}
+
+.sidebar.expanded {
+    width: 270px;
+}
+
+.sidebar.expanded .label {
+    opacity: 1;
+}
+
+.task-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BED6ED;
+    border: none;
+    border-radius: 10px;
+    padding: 35px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.task-button:hover {
+    background-color: #d0e7ff;
+}
+
+.task-button .arrow {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.text {
+    text-align: left;
+}
+
+/* ✅ ADDED: Override to show first and last name */
+.user-info p {
+    display: block;
+    margin: 10;
+    padding: 0 10px;
+    font-size: 16px;
+    color: rgb(14, 14, 92);
+}
+
+/* ✅ OPTIONAL: Align name and icon nicely */
+.user-info {
+    margin-top: 10px;;
+    display: flex;
+    gap: 10px;
+}
+
+.user-info img {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+}
