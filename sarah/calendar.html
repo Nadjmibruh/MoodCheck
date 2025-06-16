@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Calendar</title>
+  <link rel="stylesheet" href="calendar.css">
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+</script>
+
+
+</head>
+<body>
+
+    <header>
+<nav>
+    <ul>
+    <li><img src="utem_logo.png" class="logo"></li>
+    </ul>
+</nav>
+<img src="moodcheck_textlogo.png" class="logo">
+<img src="moodcheck_iconlogo.png" class="logo">
+    </header>
+  <div class="calendar">
+    <div class="month">
+      <button onclick="changeMonth(-1)">&lt;</button>
+      <span id="month-name">June</span>
+      <span id="year">2025</span>
+      <button onclick="changeMonth(1)">&gt;</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <!-- Days will be generated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class = "schedule-panel">
+    <h2>Your schedule</h2>
+    <div id = "schedule-list">
+      </div>
+    </div>
+</div>
+
+  <script src="calendar.js"></script>
+
+<div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+
+
+<div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+<aside id="sidebar" class="sidebar collapsed">
+  <a href="#"><span class="label">Home Page</span></a>
+  <a href="#"><span class="label">Profile</span></a>
+  <a href="#"><span class="label">Manage user account</span></a>
+  <a href="#"><span class="label">Security & backup</span></a>
+</aside>
