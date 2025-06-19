@@ -1,0 +1,96 @@
+/* General Page Styling */
+body {
+    background-color: #b3d5f0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center container */
+main {
+    background-color: #9cc6ec;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8AB7E2;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+header .logo {
+    height: 70px;
+}
+
+
+header nav ul li {
+    display: inline-block;
+}
+
+
+h2 {
+    color: white;
+}
+
+
+p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Submit button */
+button, .btn {
+    background-color: #2f76b8;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #245e91;
+}
+
+/* Link */
+a {
+    color: #143d66;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
