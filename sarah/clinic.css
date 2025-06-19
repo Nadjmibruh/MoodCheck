@@ -167,3 +167,16 @@ header nav ul li {
     width: 60px;
     height: 60px;
 }
+
+
+      .music-bar {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  padding: 10px 20px;
+  background: #a9c8e6;
+  gap: 10px;
+
+}
