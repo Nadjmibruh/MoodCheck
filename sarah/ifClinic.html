@@ -8,9 +8,11 @@
     sidebar.classList.toggle("expanded");
     sidebar.classList.toggle("collapsed");
   }
-
-
 </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
@@ -24,13 +26,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="clinic.css">
 
-    <script>
-      function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("expanded");
-        sidebar.classList.toggle("collapsed");
-      }
-    </script>
+    
 </head>
 
 <body>
@@ -81,3 +77,12 @@
   <a href="#"><span class="label">Schedule appointment</span></a>
   <a href="#"><span class="label">Send notification</span></a>
 </aside>
+
+
+<footer class="music-bar">
+      <ion-icon name="pause-outline"></ion-icon>
+      <input type="range" class="volume-slider" />
+      <ion-icon name="musical-notes-outline"></ion-icon>
+    </footer>
+
+</body>
