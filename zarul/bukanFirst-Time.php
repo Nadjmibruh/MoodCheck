@@ -7,70 +7,7 @@
     <title>Document</title>
     <link href="bukanFirst-Time.css" rel="stylesheet">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-    <style>
-        /* Add these new styles */
-        .sidebar {
-            width: 50px;
-            transition: width 0.3s ease;
-            background-color: #afcde9;
-            height: 100vh;
-            position: fixed;
-            overflow: hidden;
-            z-index: 100;
-        }
-        
-        .sidebar.expanded {
-            width: 250px;
-        }
-        
-        .inside-sidebar {
-            display: none;
-            padding: 20px 0;
-        }
-        
-        .sidebar.expanded .inside-sidebar {
-            display: block;
-        }
-        
-        .inside-sidebar ul {
-            list-style-type: none;
-            padding-left: 15px;
-        }
-        
-        .inside-sidebar li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .inside-sidebar li:hover {
-            background-color: #8ab7e2;
-        }
-        
-        .inside-sidebar i {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-        
-        .container {
-            margin-left: 50px;
-            width: calc(100% - 50px);
-        }
-        
-        .menu-bar {
-            padding: 15px;
-            cursor: pointer;
-            font-size: 24px;
-        }
-        
-        /* Ensure content stays fixed */
-        .btn-container {
-            position: relative;
-            left: 0;
-            width: 100%;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -93,34 +30,24 @@
 
     <div class="sidebar" id="sidebar">
         <div class="menu-bar" onclick="toggleSidebar()">
-            <i class='bx bx-menu-wide'></i>
+            <p>☰</p>
         </div>
         <div class="inside-sidebar">
             <ul>
-                <li id="home">
-                    <i class='bx bx-home-alt-2'></i>
-                    <p>Home Page</p>
-                    <i class='bx bx-chevron-right'></i>
+                <li id="home" onclick="location.href='bukanFirst-Time.php'">
+                    <p>Home Page🏠</p>
                 </li>
-                <li id="profile">
-                    <i class='bx bx-user-circle'></i>
-                    <p>Profile</p>
-                    <i class='bx bx-chevron-right'></i>
+                <li id="profile" onclick="location.href='profile.html'">
+                    <p>Profile👤</p>
                 </li>
-                <li id="activity">
-                    <i class='bx bx-browser-activity'></i>
-                    <p>Activity</p>
-                    <i class='bx bx-chevron-right'></i>
+                <li id="activity" onclick="location.href='activities.html'">
+                    <p>Activity🧠</p>
                 </li>
-                <li id="counseling-services">
-                    <i class='bx bx-conversation'></i>
-                    <p>Counseling Services</p>
-                    <i class='bx bx-chevron-right'></i>
+                <li id="counseling-services"">
+                    <p>Counseling Service💬</p>
                 </li>
-                <li id="history">
-                    <i class='bx bx-history'></i>
-                    <p>History</p>
-                    <i class='bx bx-chevron-right'></i>
+                <li id="history" onclick="location.href='history.html'">
+                    <p>History⏳</p>
                 </li>
             </ul>
         </div>
