@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+
+  <script>
+     function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("expanded");
+    sidebar.classList.toggle("collapsed");
+  }
+    </script>
+
+
+<script>
+    let profilePic = document.getElementById("Update-Picture");
+    let inputFile = document.getElementById("profileImageInput");
+
+    inputFile.onchange = function(){
+        profilePic.src =URL.createObjectURL(inputFile.files[0]);
+}
+</script>   
+
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><img src="utem_logo.png" class="logo"></li>
+    </ul>
+  </nav>
+  <img src="moodcheck_textlogo.png" class="logo">
+  <img src="moodcheck_iconlogo.png" class="logo">
+</header>
+
+<div class="menu-icon" onclick="toggleSidebar()">☰</div>
+
+<aside id="sidebar" class="sidebar collapsed">
+  <a href="firsttimeuser.html"><span class="label">Home Page</span></a>
+  <a href="profile.html"><span class="label">Profile</span></a>
+  <a href="activities.html"><span class="label">Activity</span></a>
+  <a href="anonymous.html"><span class="label">Counseling Service</span></a>
+  <a href="history.html"><span class="label">History</span></a>
+</aside>
+
+<main>
+  <form id="updateProfile" onsubmit="return validateForm()">
+
+    <div>
+      <label for="firstname">First Name</label><br>
+      <input type="text" id="firstname">
+    </div>
+
+    <div class="lastname-with-pic">
+      <div>
+        <label for="lastname">Last Name</label><br>
+        <input type="text" id="lastname">
+      </div>
+
+      <div class="pic-group">
+        <label for="profileImageInput">
+          <img src="updatePic.png" alt="Update Picture" class="camera-pic">
+        </label>
+        <img id="profilePreview" src="profileUpdate.png" alt="Updated Picture" class="profile-pic">
+        <input type="file" id="profileImageInput" accept="image/*" style="display: none">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="field">
+        <label for="faculty">Faculty</label><br>
+        <input type="text" id="faculty">
+      </div>
+
+      <div class="field">
+        <label for="year">Year</label><br>
+        <input type="number" id="year">
+      </div>
+
+      <div class="field gender-field">
+        <label for="gender">Gender</label>
+        <div class="gender-options">
+          <input type="radio" id="male" name="gender" value="M">
+          <label for="male">M</label>
+          <input type="radio" id="female" name="gender" value="F">
+          <label for="female">F</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email">
+      </div>
+
+      <div class="field birth-date">
+        <label>Birth date</label><br>
+        <input type="text" placeholder="dd mm yyyy" />
+      </div>
+    </div>
+
+    <div>
+      <label for="password">New password</label><br>
+      <input type="password" id="password">
+    </div>
+
+    <div>
+      <label for="confirmPass">Confirm password</label><br>
+      <input type="password" id="confirmPass">
+    </div>
+
+    <div class="side-by-side-preferences">
+      <div class="section">
+        <h3>Notification Preferences</h3>
+        <div class="toggle-group">
+          <label><input type="checkbox" checked /> Assessment reminders</label>
+          <label><input type="checkbox" checked /> Appointment alerts</label>
+          <label><input type="checkbox" checked /> Anonymous message replies</label>
+        </div>
+      </div>
+
+      <div class="music-section">
+        <h3>Music Controls</h3>
+        <div class="music-controls">
+          <label>
+            <input type="checkbox" id="toggleMusicCheckbox" checked onchange="toggleMusicCheckbox()" />
+            Enable background music
+          </label>
+
+          <label>
+            Volume:
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" onchange="setVolume()" />
+          </label>
+
+          <div class="music-icons">
+            <div onclick="changeMusic('ocean')">🌊<br/>Ocean waves</div>
+            <div onclick="changeMusic('instrumental')">🎼<br/>Instrumental</div>
+            <div onclick="changeMusic('rain')">☔️<br/>Rain sounds</div>
+            <div onclick="changeMusic('nature')">🍃<br/>Nature ambience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</main>
+
+<audio id="backgroundMusic" loop>
+  <source id="musicSource" src="ocean.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script src="profile.js"></script>
+</body>
+</html>
