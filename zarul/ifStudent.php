@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <audio loop controls autoplay volume="50%"> 
+    <audio loop controls  volume="50%"> 
         <source src="The Deli - Flowers.mp3" type="audio/mp3">
         <source src="The Deli - Flower.wav" type="audio/wav">
     </audio>
@@ -30,55 +30,61 @@
         </ul>
     </div>
 
-    <div class= "outer-box">
-        <div class="inside-box">
-            <h2>Sign Up</h2>
+    <div class= "background">
+        <div class="inside">
+            <form id="signup">
                 <table class="inside-inside">
                     <tr>
                         <td class="label">First Name</td>
-                        <td><input type="text" placeholder="will" required></td>
+                        <td><input type="text" name="firstName" placeholder=" will" required></td>
                     </tr>
                     <tr>
                         <td class="label">Last Name</td>
-                        <td><input type="text" placeholder="smith" required></td>
+                        <td><input type="text" name="lastName" placeholder=" smith" required></td>
                     </tr>
                     <tr>
                         <td class="label">E-mail</td>
-                        <td><input type="email" placeholder="asdfg@gmail.com" required></td>
+                        <td><input type="email" name="email" placeholder=" asdfg@gmail.com" required></td>
                     </tr>
                     <tr>
                         <td class="label">Birth Date</td>
-                        <td><input type="date" placeholder="dd/mm/yyyy" required></td>
+                        <td><input type="date" name="birthDate" required></td>
                     </tr>
                     <tr>
                         <td class="label">Phone Number</td>
-                        <td><input type="tel"  placeholder="01234567789" required></td>
+                        <td><input type="tel" name="phone" placeholder=" 01234567789" required></td>
                     </tr>
                     <tr>
                         <td class="label">Password</td>
                         <td>
-                            <div class="password-field" style="cursor: pointer;">
-                                <input type="password" required id="password">
-                                <span id="eye">👁️</span>
-                            </div>
+                        <div class="password-field" style="cursor: pointer;">
+                            <input type="password" name="password" required id="password">
+                            <span id="eye">👁️</span>
+                        </div>
                         </td>
                     </tr>
                     <tr>
                         <td class="label">Confirm Password</td>
                         <td>
-                            <div class="password-field" style="cursor: pointer;" >
-                                <input type="password" required id="confirm-password">
-                            </div>
+                        <div class="password-field" style="cursor: pointer;">
+                            <input type="password" name="confirmPassword" required id="confirm-password">
+                        </div>
                         </td>
                     </tr>
                 </table>
-            <div class="role-collapse">
-                <label><strong>Are you a?</strong></label><br>
-                <label class="label"><input onclick="showStudentPopup()" type="radio" name="role" id="student-radio"> Student</label>
-                <label class="label"><input type="radio" name="role"> Clinic Staff</label>
-                <label class="label"><input type="radio" name="role"> Counsellor</label>
-            </div>
+                <div class="role-collapse">
+                    <p><strong> Are you a? </strong></p>
+                    <div class="radio-group">
+                        <label class="label"><input onclick="showStudentPopup()" type="radio" name="role" required> Student</label>
+                        <label class="label"><input type="radio" name="role"> Clinic Staff</label>
+                        <label class="label"><input type="radio" name="role"> Counsellor</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign up</button>
+            </form>
         </div>
+
     </div>
     
     <!-- Add the popup HTML -->
@@ -131,7 +137,7 @@
         <button class="popup-btn" onclick="closePopup()" style="margin-top: 20px; margin-left:87%;">DONE</button>
     </div>
 
-    <button class="signup-btn">Sign up</button>
+    
 
     <script>
         let eye = document.getElementById("eye");
@@ -161,6 +167,19 @@
         
         // Close popup when clicking outside of it
         document.getElementById("popup-overlay").addEventListener('click', closePopup);
+
+        document.getElementById("signup-form").addEventListener("submit", function (e) {
+    if (!this.checkValidity()) {
+      e.preventDefault(); // Prevent form submission
+      this.reportValidity(); // Show native browser messages
+    } else {
+      e.preventDefault(); // Prevent default for controlled redirect
+      // You can perform extra checks here (e.g. password match)
+
+      // Redirect if all valid
+    window.location.href = "main.html";
+    }
+    });
     </script>
 </body>
 </html>

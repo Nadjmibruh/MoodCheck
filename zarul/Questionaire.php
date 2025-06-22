@@ -40,29 +40,29 @@
     <div class="container">
 
         <div class="sidebar" id="sidebar">
-        <div class="menu-bar" onclick="toggleSidebar()">
-            <p>☰</p>
+            <div class="menu-bar" onclick="toggleSidebar()">
+                <p>☰</p>
+            </div>
+            <div class="inside-sidebar">
+                <ul>
+                    <li id="home" onclick="location.href='bukanFirst-Time.php'">
+                        <p>Home Page🏠</p>
+                    </li>
+                    <li id="profile" onclick="location.href='profile.html'">
+                        <p>Profile👤</p>
+                    </li>
+                    <li id="activity" onclick="location.href='activities.html'">
+                        <p>Activity🧠</p>
+                    </li>
+                    <li id="counseling-services"">
+                        <p>Counseling Service💬</p>
+                    </li>
+                    <li id="history" onclick="location.href='history.html'">
+                        <p>History⏳</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="inside-sidebar">
-            <ul>
-                <li id="home" onclick="location.href='bukanFirst-Time.php'">
-                    <p>Home Page🏠</p>
-                </li>
-                <li id="profile" onclick="location.href='profile.html'">
-                    <p>Profile👤</p>
-                </li>
-                <li id="activity" onclick="location.href='activities.html'">
-                    <p>Activity🧠</p>
-                </li>
-                <li id="counseling-services"">
-                    <p>Counseling Service💬</p>
-                </li>
-                <li id="history" onclick="location.href='history.html'">
-                    <p>History⏳</p>
-                </li>
-            </ul>
-        </div>
-    </div>
 
         <div class="btn-container">
             <div class="content-text">
@@ -104,7 +104,7 @@
                         <br>
                         <ul style="background-color:#E0F0FF ;">
                             <p>4. I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion)</p>
-                            <li >
+                            <li>
                                 <input type="radio" name="q2" value="1">1</input>
                                 <input type="radio" name="q2" value="2">2</input>
                                 <input type="radio" name="q2" value="3">3</input>
